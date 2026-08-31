@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Slap</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <h1 class="popup-title">SCROLL SLAP   </h1>
+      <div class="status-badge" id="statusBadge">
+        <span class="status-dot active"></span>
+        ACTIVE
+      </div>
+    </div>
+
+    <div class="popup-content">
+      <!-- Extension Toggle -->
+      <div class="popup-section">
+        <label class="popup-label">Extension Status</label>
+        <div class="toggle-switch-wrapper">
+          <input type="checkbox" id="enableToggle" class="toggle-switch">
+          <label for="enableToggle" class="toggle-label">
+            <span class="toggle-text" id="toggleText">Enabled</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Personality Selection -->
+      <div class="popup-section">
+        <label class="popup-label">Personality</label>
+        <div class="personality-selector">
+          <button class="personality-btn active" data-personality="brutal">
+            BRUTAL   
+          </button>
+          <button class="personality-btn" data-personality="disappointed">
+            DISAPPOINTED   
+          </button>
+          <button class="personality-btn" data-personality="funny">
+            FUNNY   
+          </button>
+        </div>
+      </div>
+
+      <!-- Intervention Range -->
+      <div class="popup-section">
+        <label class="popup-label">Intervention Range</label>
+        <div class="range-display">
+          <span id="rangeText">5 min — 20 min (Production Mode)</span>
+        </div>
+        <label class="checkbox-label">
+          <input type="checkbox" id="testingMode">
+          <span>Testing Mode (30s - 60s)</span>
+        </label>
+      </div>
+
+      <!-- Sites -->
+      <div class="popup-section">
+        <label class="popup-label">Monitored Sites</label>
+        <div class="sites-list">
+          <label class="checkbox-label">
+            <input type="checkbox" class="site-checkbox" value="youtube" checked>
+            <span>   YouTube</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" class="site-checkbox" value="instagram" checked>
+            <span>   Instagram</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" class="site-checkbox" value="reddit" checked>
+            <span>   Reddit</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" class="site-checkbox" value="x" checked>
+            <span>   X (Twitter)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="popup-section">
+        <label class="popup-label">Session Stats</label>
+        <div class="stats-display">
+          <div class="stat-item">
+            <span class="stat-label">Interventions:</span>
+            <span class="stat-value" id="interventionCount">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Last Intervention:</span>
+            <span class="stat-value" id="lastIntervention">Never</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="popup-footer">
+        <p class="footer-text">V1.0 • Break the autopilot</p>
+        <p class="footer-subtext">Made to interrupt your scrolling habits</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
